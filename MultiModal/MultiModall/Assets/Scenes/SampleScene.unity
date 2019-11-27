@@ -226,6 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aa41fe3e70c0f428a521271801d9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detected: 0
+  detected2: 0
   correct: {fileID: 260824511}
   wrong: {fileID: 952930323}
   Player: {fileID: 2122143253}
@@ -570,6 +572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aa41fe3e70c0f428a521271801d9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detected: 0
+  detected2: 0
   correct: {fileID: 260824511}
   wrong: {fileID: 952930323}
   Player: {fileID: 2122143253}
@@ -822,6 +826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aa41fe3e70c0f428a521271801d9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detected: 0
+  detected2: 0
   correct: {fileID: 260824511}
   wrong: {fileID: 952930323}
   Player: {fileID: 2122143253}
@@ -2466,6 +2472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aa41fe3e70c0f428a521271801d9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detected: 0
+  detected2: 0
   correct: {fileID: 260824511}
   wrong: {fileID: 952930323}
   Player: {fileID: 2122143253}
@@ -2591,6 +2599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aa41fe3e70c0f428a521271801d9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detected: 0
+  detected2: 0
   correct: {fileID: 260824511}
   wrong: {fileID: 952930323}
   Player: {fileID: 2122143253}
@@ -2716,6 +2726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aa41fe3e70c0f428a521271801d9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detected: 0
+  detected2: 0
   correct: {fileID: 260824511}
   wrong: {fileID: 952930323}
   Player: {fileID: 2122143253}
@@ -2775,6 +2787,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 168962, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 134650, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.911
@@ -2827,14 +2847,6 @@ PrefabInstance:
       propertyPath: _trackingOriginType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 168962, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
-      propertyPath: m_TagString
-      value: Hand
-      objectReference: {fileID: 0}
-    - target: {fileID: 134650, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
-      propertyPath: m_TagString
-      value: Hand
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
 --- !u!1 &2122143253 stripped
@@ -2855,6 +2867,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b05a75ad6d406a4db6bbedc377264b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightHand: {fileID: 2097907237}
+  timeleft: 10
+  levelIsStarted: 0
   audiozone: {fileID: 131775207}
   select: {fileID: 2100000, guid: e3ded7c2fc766be4cb7293d9b7213a47, type: 2}
   standard: {fileID: 2100000, guid: a964ccffb68366e4e8300713f61b6ff3, type: 2}
@@ -2864,11 +2879,27 @@ MonoBehaviour:
   cube4: {fileID: 1885977371}
   cube5: {fileID: 279248442}
   cube6: {fileID: 1827054830}
+  test1Wrong: 0
+  test1Correct: 0
+  test2Wrong: 0
+  test2Correct: 0
+  test3Wrong: 0
+  test3Correct: 0
+  test4Wrong: 0
+  test4Correct: 0
+  test5Wrong: 0
+  test5Correct: 0
+  test5CorrectAudio: 0
+  test5CorrectVisual: 0
+  test5CorrectHaptic: 0
   cubes: []
   counter: 0
   current: 0
   text: {fileID: 579882321}
-  mode: 2
+  mode: 5
+  test51: 0
+  test52: 0
+  test53: 0
 --- !u!114 &2122143255
 MonoBehaviour:
   m_ObjectHideFlags: 0
