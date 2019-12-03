@@ -7,7 +7,7 @@ public class modeSelect : MonoBehaviour
     public GameObject rightHand;
 
     //countdown variables
-    public float timeleft = 30.0f;
+    public float timeleft = 60.0f;
     public bool levelIsStarted = false;
 
     public GameObject audiozone;
@@ -53,7 +53,7 @@ public class modeSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeleft = 30.0f;
+        timeleft = 60.0f;
 
     cubes = new GameObject[] { cube1, cube2, cube3, cube4, cube5, cube6 };
     }
@@ -119,7 +119,7 @@ public class modeSelect : MonoBehaviour
         {
             
             float dist = Vector3.Distance(cubes[current].transform.position, rightHand.transform.position);
-            float nonliniar = 2.0f - dist;
+            float nonliniar = 3.0f - dist;
 
             float mapped = nonliniar / 4.0f * 255;
 
@@ -138,7 +138,7 @@ public class modeSelect : MonoBehaviour
             audiozone.transform.position = cubes[current].transform.position;
 
             float dist = Vector3.Distance(cubes[current].transform.position, rightHand.transform.position);
-            float nonliniar = 2.0f - dist;
+            float nonliniar = 3.0f - dist;
 
             float mapped = nonliniar / 4.0f * 255;
 
@@ -157,7 +157,7 @@ public class modeSelect : MonoBehaviour
             audiozone.transform.position = cubes[test52].transform.position;
 
             float dist = Vector3.Distance(cubes[test53].transform.position, rightHand.transform.position);
-            float nonliniar = 2.0f - dist;
+            float nonliniar = 3.0f - dist;
 
             float mapped = nonliniar / 4.0f * 255;
             vibrationManager.singleton.triggerVibration(60, 2, Mathf.RoundToInt(mapped));
@@ -184,7 +184,7 @@ public class modeSelect : MonoBehaviour
             mode = mode + 1;
             levelIsStarted = false;
             counter = 0;
-            timeleft = 30.0f;
+            timeleft = 60.0f;
         }
       
         
@@ -217,9 +217,14 @@ public class modeSelect : MonoBehaviour
         }
         else if (mode == 6)
         {
-            Debug.Log("visual wrong: " + test1Wrong + "visual correct: " + test1Correct + "Audio wrong: " + test2Wrong + "Audio correct: " + test2Correct+
-                "haptic wrong: " + test3Wrong + "haptic correct: " + test3Correct + "all wrong: " + test4Wrong + "all correct: " + test4Correct+
-                "test5 wrong: " + test5Wrong + "test5 visualcorrect: " + test5CorrectVisual + "test5 audiocorrect: " + test5CorrectAudio + "test5 hapticCorrect: " +test5CorrectHaptic);
+            string finalString = "visual wrong: " + test1Wrong + "\n visual correct: " + test1Correct + "\n Audio wrong: " + test2Wrong + "\n Audio correct: " + test2Correct +
+                "\n haptic wrong: " + test3Wrong + "\n haptic correct: " + test3Correct + "\n all wrong: " + test4Wrong + "\n all correct: " + test4Correct +
+                "\n test5 wrong: " + test5Wrong + "\n test5 visualcorrect: " + test5CorrectVisual + "\n test5 audiocorrect: " + test5CorrectAudio + "\n test5 hapticCorrect: " + test5CorrectHaptic;
+
+            text.GetComponent<TextMeshPro>().text = finalString;
+            text.GetComponent<TextMeshPro>().fontSize = 8;
+
+           
         }
         if (mode == 2||mode==4 ||mode==5)
         {
